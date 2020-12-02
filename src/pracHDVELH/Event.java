@@ -24,6 +24,12 @@ public class Event extends NodeMultiple {
 
 	private String playerAnswer;
 
+	private String pathAnswer;
+
+	private int chosenPath;
+
+	protected String data;
+
 	private int chosenPath;
 
 	private Scanner reader;
@@ -60,28 +66,28 @@ public class Event extends NodeMultiple {
 	 * @return the reader
 	 */
 	public Scanner getReader() {
-		/* TO BE COMPLETED */
+		return this.reader;
 	}
 
 	/**
 	 * @param reader the reader to set
 	 */
 	public void setReader(Scanner reader) {
-		/* TO BE COMPLETED */
+		this.gui.(reader);
 	}
 
 	/**
 	 * @return the chosenPath
 	 */
 	public int getChosenPath() {
-		/* TO BE COMPLETED */
+		return this.chosenPath;
 	}
 
 	/**
 	 * @param chosenPath the chosenPath to set
 	 */
 	public void setChosenPath(int chosenPath) {
-		/* TO BE COMPLETED */
+		this.chosenPath = chosenPath;
 	}
 
 	/* Methods */
@@ -89,7 +95,7 @@ public class Event extends NodeMultiple {
 	 * @see pracHDVELH.NodeMultiple#getData()
 	 */
 	public String getData() {
-		/* TO BE COMPLETED */
+		return this.data;
 	}
 
 	/**
@@ -97,7 +103,7 @@ public class Event extends NodeMultiple {
 	 * @param data
 	 */
 	public void setData(String data) {
-		/* TO BE COMPLETED */
+		this.data = data;
 	}
 
 	/**
@@ -121,21 +127,21 @@ public class Event extends NodeMultiple {
 	 * @return the gui
 	 */
 	public GUIManager getGui() {
-		/* TO BE COMPLETED */
+		return this.gui;
 	}
 
 	/**
 	 * @param gui the gui to set
 	 */
 	public void setGui(GUIManager gui) {
-		/* TO BE COMPLETED */
+		this.gui = gui;
 	}
 
 	/**
 	 * @return the id
 	 */
 	public int getId() {
-		/* TO BE COMPLETED */
+		return this.id;
 	}
 
 	/* Methods */

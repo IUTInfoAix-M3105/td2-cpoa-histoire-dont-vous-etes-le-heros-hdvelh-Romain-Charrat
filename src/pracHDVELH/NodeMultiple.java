@@ -6,6 +6,7 @@
 package pracHDVELH;
 
 import myUtils.ErrorNaiveHandler;
+import java.util.ArrayList;
 
 /**
  * @author prost
@@ -17,7 +18,7 @@ public class NodeMultiple {
 	public static int NODE_MAX_ARITY = 10;
 
 	private NodeMultiple[] daughters;
-	private Object data;
+	private Object data = new NodeMultiple();
 
 	/* Overridden methods */
 	@Override
@@ -58,14 +59,14 @@ public class NodeMultiple {
 	 * @param i        the daughter node's index
 	 */
 	public void setDaughter(NodeMultiple daughter, int i) {
-		/* TO BE COMPLETED */
+		this.daughters[i] = daughter;
 	}
 
 	/**
 	 * @return all the daughters
 	 */
 	public NodeMultiple[] getDaughters() {
-		/* TO BE COMPLETED */
+		return this.daughters;
 	}
 
 	/**
@@ -102,14 +103,14 @@ public class NodeMultiple {
 	 * @return the content data
 	 */
 	public Object getData() {
-		/* TO BE COMPLETED */
+		return this.data;
 	}
 
 	/**
 	 * @param data
 	 */
 	public void setData(Object data) {
-		/* TO BE COMPLETED */
+		this.data = data;
 	}
 
 	/**
@@ -117,7 +118,12 @@ public class NodeMultiple {
 	 * daughter node.
 	 */
 	public boolean hasDaughters() {
-		/* TO BE COMPLETED */
+		for (int i = 0; i < this.daughters.length; ++i) {
+			if (daughters[i] != null) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/* Constructors */
